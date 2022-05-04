@@ -1,10 +1,13 @@
 package com.kumarrittik99.dependencyinjectiondagger2.di.components
 
-import com.kumarrittik99.dependencyinjectiondagger2.features.main.viewmodels.MainActivityViewModel
+import com.kumarrittik99.dependencyinjectiondagger2.di.producers.ImplementationModule
+import com.kumarrittik99.dependencyinjectiondagger2.features.main.MainActivity
 import dagger.Component
 
-@Component
+@Component(modules = [ImplementationModule::class])
 interface ImplementationComponent {
 
-    fun getViewModel(): MainActivityViewModel
+    //fun getViewModel(): MainActivityViewModel
+
+    fun injectDependencies(mainActivity: MainActivity)
 }
