@@ -1,4 +1,6 @@
 package com.kumarrittik99.dependencyinjectiondagger2.features.main.data.local
 
-class Local {
+import javax.inject.Inject
+
+class Local @Inject constructor() {
 }
